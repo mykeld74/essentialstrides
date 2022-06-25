@@ -1,6 +1,4 @@
-<script>
-	import Fa from 'svelte-fa/src/fa.svelte';
-	import { faBars, faLink, faTimes } from '@fortawesome/free-solid-svg-icons';
+<script lang="ts">
 	import { fly, fade } from 'svelte/transition';
 	const delayInterval = 50;
 
@@ -33,9 +31,36 @@
 <button on:click={() => (isOpen = !isOpen)} class={isOpen ? 'navButton close' : 'navButton'}>
 	<div class="faIcon">
 		{#if isOpen}
-			<Fa icon={faTimes} />
+			<div class="close">
+				<svg viewBox="0 0 254 248" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect
+						x="41.6116"
+						y="0.256348"
+						width="300"
+						height="50"
+						rx="25"
+						transform="rotate(45 41.6116 0.256348)"
+						class="icon"
+					/>
+					<rect
+						x="0.256348"
+						y="212.388"
+						width="300"
+						height="50"
+						rx="25"
+						transform="rotate(-45 0.256348 212.388)"
+						class="icon"
+					/>
+				</svg>
+			</div>
 		{:else}
-			<Fa icon={faBars} class="faIcon" />
+			<div class="bars">
+				<svg viewBox="0 0 300 252" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect width="300" height="50" rx="25" class="icon" />
+					<rect y="101" width="300" height="50" rx="25" class="icon" />
+					<rect y="202" width="300" height="50" rx="25" class="icon" />
+				</svg>
+			</div>
 		{/if}
 	</div>
 </button>
@@ -129,7 +154,7 @@
 	.faIcon {
 		margin: 0;
 		padding: 0;
-		font-size: 32px;
+		width: 32px;
 	}
 	.iconContainer {
 		width: 16px;
@@ -139,7 +164,8 @@
 			width: 100%;
 		}
 	}
-	.arrow {
+	.arrow,
+	.icon {
 		fill: var(--navTextColor);
 	}
 
