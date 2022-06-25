@@ -6,11 +6,23 @@
 	--secondaryColor: #8f3d5a;
 	--navTextColor: #fff;
 	--arrowMargin: 10px;
+	--fontColor: #000;
+	--backgroundColor: #fff;
+}
+
+.dark {
+	--fontColor: #fff;
+	--backgroundColor: #000;
+	--primaryColor: #8f3d5a;
+	--secondaryColor: #8dd2bd;
+	--navTextColor: #000;
 }
 
 body,
 html {
 	font-family: 'Libre Franklin', sans-serif;
+	color: var(--fontColor);
+	background-color: var(--backgroundColor);
 }
 
 p,

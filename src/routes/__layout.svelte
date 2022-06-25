@@ -1,10 +1,34 @@
 <script>
+	import { onMount } from 'svelte';
 	import '$css/styles.scss';
 	import Img from '$components/image.svelte';
 	import Nav from '$components/nav.svelte';
-
-	//get current year
+	import ThemeToggle from '$components/themeToggle.svelte';
 	const currentYear = new Date().getFullYear();
+	let isToggled = false;
+
+	onMount(() => {
+		let hasPreference = localStorage.getItem('theme') !== null;
+		let themePreference = localStorage.getItem('theme') || 'light';
+		const CheckTheme = () => {
+			if (hasPreference && themePreference === 'dark') {
+				// @ts-ignore
+				document.querySelector('body').classList.add('dark');
+				isToggled = true;
+			} else if (hasPreference && themePreference === 'light') {
+				// @ts-ignore
+				document.querySelector('body').classList.add('light');
+				isToggled = false;
+			} else {
+				if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					// @ts-ignore
+					document.querySelector('body').classList.add('dark');
+					isToggled = true;
+				}
+			}
+		};
+		CheckTheme();
+	});
 </script>
 
 <div class="navContainer">
@@ -16,6 +40,7 @@
 			<Img source="esLogo" altText="Essential Strides Logo" />
 		</div>
 	</a>
+	<div class="themeToggle"><ThemeToggle {isToggled} /></div>
 </header>
 <slot />
 <footer>
@@ -33,6 +58,12 @@
 	header {
 		padding: 10px 0;
 		border-bottom: 3px solid var(--secondaryColor);
+		position: relative;
+	}
+	.themeToggle {
+		position: absolute;
+		right: 10px;
+		top: 10px;
 	}
 	.logoContainer {
 		width: calc(100% - 40px);
@@ -43,10 +74,10 @@
 		padding: 20px;
 		text-align: right;
 		background: var(--primaryColor);
-		color: #333;
 	}
 	.copyright {
 		margin: 0 0 20px 0;
 		font-size: 14px;
+		color: var(--fontColor);
 	}
 </style>

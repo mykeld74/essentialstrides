@@ -83,6 +83,9 @@
 			width: 100%;
 		}
 	}
+	h2 {
+		text-decoration: underline;
+	}
 	.feetImages {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
