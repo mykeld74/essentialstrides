@@ -11,9 +11,11 @@
 	<Nav />
 </div>
 <header>
-	<div class="logoContainer">
-		<Img source="esLogo" altText="Essential Strides Logo" />
-	</div>
+	<a href="/">
+		<div class="logoContainer">
+			<Img source="esLogo" altText="Essential Strides Logo" />
+		</div>
+	</a>
 </header>
 <slot />
 <footer>
