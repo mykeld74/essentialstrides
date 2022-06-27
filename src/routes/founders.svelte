@@ -2,6 +2,10 @@
 	import Img from '$components/image.svelte';
 </script>
 
+<svelte:head>
+	<title>Meet our Founders | Essential Strides</title>
+</svelte:head>
+
 <div class="contentContainer">
 	<h1>Meet Our Founders:</h1>
 	<div class="blue">

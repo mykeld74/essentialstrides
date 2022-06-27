@@ -2,6 +2,10 @@
 	import Img from '$components/image.svelte';
 </script>
 
+<svelte:head>
+	<title>Essential Strides</title>
+</svelte:head>
+
 <div class="heroContainer" />
 
 <!-- <div class="titleBar"><h1>Essential Strides</h1></div> -->

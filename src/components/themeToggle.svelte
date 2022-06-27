@@ -2,8 +2,8 @@
 	export let isToggled = false;
 	const toggle = () => {
 		const body = document.querySelector('body');
+		// @ts-ignore
 		const classes = body.classList;
-		console.log(isToggled, 'isToggled');
 
 		if (classes.contains('dark')) {
 			localStorage.setItem('theme', 'light');
