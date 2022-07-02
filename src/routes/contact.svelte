@@ -9,3 +9,9 @@
 <div class="contentContainer">
 	<ContactForm />
 </div>
+
+<style>
+	.contentContainer {
+		min-height: calc(100vh - 100px);
+	}
+</style>

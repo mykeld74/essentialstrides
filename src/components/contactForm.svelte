@@ -3,12 +3,12 @@
 	let errors = { name: '', email: '', phone: '', message: '' };
 	let formIsValid = false;
 	let showTYModal = false;
-	export let fieldName: string;
-	export let value: string | string[];
-	let nameError = false;
-	let phoneError = false;
-	let emailError = false;
-	let messageError = false;
+	// export let fieldName: string;
+	// export let value: string | string[];
+	export let nameError = false;
+	export let phoneError = false;
+	export let emailError = false;
+	export let messageError = false;
 	const emailTest = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{1,6}$/;
 
 	const validateField = (fieldName: string, value: string | string[]) => {
@@ -111,7 +111,7 @@
 	};
 </script>
 
-<form name="contact" id="contact" class="contactForm" netlify>
+<form name="contact" id="contact" class="contactForm" data-netlify="true">
 	<input type="hidden" name="form-name" value="contact" />
 	<input class="hidden" name="bot-field" />
 	<div class="formBlock">
@@ -158,6 +158,7 @@
 			name="message"
 			id="message"
 			class={messageError ? 'inputError' : ''}
+			required
 			bind:value={fields.message}
 			on:blur={() => validateField('message', fields.message)}
 		/>
