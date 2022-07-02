@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { fly, fade } from 'svelte/transition';
-	const delayInterval = 50;
+	const delayInterval = 100;
 
 	const navItems = [
 		{
@@ -32,33 +32,62 @@
 	<div class="faIcon">
 		{#if isOpen}
 			<div class="close">
-				<svg viewBox="0 0 254 248" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<rect
-						x="41.6116"
-						y="0.256348"
-						width="300"
-						height="50"
-						rx="25"
-						transform="rotate(45 41.6116 0.256348)"
+				<svg viewBox="0 0 315 315" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<line
+						x1="36.3553"
+						y1="39"
+						x2="273.943"
+						y2="276.588"
+						stroke="black"
+						stroke-width="50"
+						stroke-linecap="round"
 						class="icon"
 					/>
-					<rect
-						x="0.256348"
-						y="212.388"
-						width="300"
-						height="50"
-						rx="25"
-						transform="rotate(-45 0.256348 212.388)"
+					<line
+						x1="42"
+						y1="276.588"
+						x2="279.588"
+						y2="38.9999"
+						stroke="black"
+						stroke-width="50"
+						stroke-linecap="round"
 						class="icon"
 					/>
 				</svg>
 			</div>
 		{:else}
 			<div class="bars">
-				<svg viewBox="0 0 300 252" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<rect width="300" height="50" rx="25" class="icon" />
-					<rect y="101" width="300" height="50" rx="25" class="icon" />
-					<rect y="202" width="300" height="50" rx="25" class="icon" />
+				<svg viewBox="0 0 315 315" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<line
+						x1="31"
+						y1="65"
+						x2="281"
+						y2="65"
+						stroke="black"
+						stroke-width="50"
+						stroke-linecap="round"
+						class="icon topLine"
+					/>
+					<line
+						x1="31"
+						y1="170"
+						x2="281"
+						y2="170"
+						stroke="black"
+						stroke-width="50"
+						stroke-linecap="round"
+						class="icon middleLine"
+					/>
+					<line
+						x1="31"
+						y1="275"
+						x2="281"
+						y2="275"
+						stroke="black"
+						stroke-width="50"
+						stroke-linecap="round"
+						class="icon bottomLine"
+					/>
 				</svg>
 			</div>
 		{/if}
@@ -167,6 +196,7 @@
 	.arrow,
 	.icon {
 		fill: var(--navTextColor);
+		stroke: var(--navTextColor);
 	}
 
 	ul {

@@ -76,7 +76,6 @@
 		background: var(--primaryColor);
 	}
 	.copyright {
-		margin: 0 0 20px 0;
 		font-size: 14px;
 		color: var(--fontColor);
 	}
