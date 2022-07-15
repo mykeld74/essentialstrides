@@ -55,7 +55,7 @@
 		return error;
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = (e: any) => {
 		formIsValid = true;
 
 		if (fields.name.length < 2) {
@@ -97,11 +97,12 @@
 
 		let myForm = document.getElementById('contact') as HTMLFormElement;
 		let formData: any = new FormData(myForm);
+		console.log(fields);
 		if (formIsValid) {
 			fetch('/', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-				body: new URLSearchParams(formData).toString()
+				body: new URLSearchParams(fields).toString()
 			})
 				.then(() => {
 					console.log('Form successfully submitted'), (showTYModal = true), myForm.reset();
