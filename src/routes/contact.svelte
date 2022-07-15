@@ -16,5 +16,6 @@
 <style>
 	.contentContainer {
 		min-height: calc(100vh - 100px);
+		margin-top: 20px;
 	}
 </style>

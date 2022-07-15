@@ -31,6 +31,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"netlify-cli": "^10.10.0"
+		"netlify-cli": "^10.10.0",
+		"svelte-imask": "^1.2.0"
 	}
 }

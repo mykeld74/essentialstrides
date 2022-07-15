@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Modal from '$components/modal.svelte';
+	import { imask } from 'svelte-imask';
 	let fields = { name: '', email: '', phone: '', message: '' };
 	let errors = { name: '', email: '', phone: '', message: '' };
 	let formIsValid = false;
@@ -34,8 +36,8 @@
 				}
 				break;
 			case 'phone':
-				if (value.length < 10) {
-					errors.phone = 'Phone must be at least 10 characters long';
+				if (value.length < 13) {
+					errors.phone = 'Please enter a valid phone number';
 					phoneError = true;
 				} else {
 					errors.phone = '';
@@ -66,7 +68,7 @@
 			errors.name = '';
 			nameError = false;
 		}
-		if (fields.phone.length < 10) {
+		if (fields.phone.length < 13) {
 			formIsValid = false;
 			errors.phone = 'Please enter a valid phone number.';
 			phoneError = true;
@@ -97,7 +99,6 @@
 
 		let myForm = document.getElementById('contact') as HTMLFormElement;
 		let formData: any = new FormData(myForm);
-		console.log(new URLSearchParams(formData).toString());
 		if (formIsValid) {
 			fetch('/contact/', {
 				method: 'POST',
@@ -109,6 +110,9 @@
 				})
 				.catch((error) => alert(error));
 		}
+	};
+	const options = {
+		mask: '(000)000-0000'
 	};
 </script>
 
@@ -130,6 +134,7 @@
 	</div>
 	<div class="formBlock">
 		<input
+			use:imask={options}
 			type="tel"
 			name="phone"
 			id="phone"
@@ -170,6 +175,14 @@
 		<button type="submit" on:click={handleSubmit}>Submit</button>
 	</div>
 </form>
+
+{#if showTYModal}
+	<Modal isOpen={showTYModal}>
+		<div slot="content" class="successContent">
+			<p>Thank you for your submission, we'll be in touch soon.</p>
+		</div>
+	</Modal>
+{/if}
 
 <style lang="scss">
 	.contactForm {
