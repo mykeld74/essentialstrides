@@ -97,12 +97,12 @@
 
 		let myForm = document.getElementById('contact') as HTMLFormElement;
 		let formData: any = new FormData(myForm);
-		console.log(fields);
+		console.log(new URLSearchParams(formData).toString());
 		if (formIsValid) {
-			fetch('/', {
+			fetch('/contact/', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-				body: new URLSearchParams(fields).toString()
+				body: new URLSearchParams(formData).toString()
 			})
 				.then(() => {
 					console.log('Form successfully submitted'), (showTYModal = true), myForm.reset();
