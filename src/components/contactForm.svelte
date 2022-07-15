@@ -111,9 +111,9 @@
 	};
 </script>
 
-<form name="contact" id="contact" class="contactForm" data-netlify="true">
-	<input type="hidden" name="form-name" value="contact" />
-	<input class="hidden" name="bot-field" />
+<form name="contact" id="contact" class="contactForm" data-netlify="true" method="POST">
+	<input type="hidden" class="hidden" name="form-name" value="contact" />
+	<!-- <input class="hidden" name="bot-field" /> -->
 	<div class="formBlock">
 		<input
 			type="text"
@@ -166,7 +166,7 @@
 		<p class="error">{errors.message}</p>
 	</div>
 	<div class="formBlock">
-		<button type="submit" on:click={handleSubmit}>Submit</button>
+		<button type="submit">Submit</button>
 	</div>
 </form>
 
