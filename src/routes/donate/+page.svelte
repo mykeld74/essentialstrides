@@ -1,7 +1,3 @@
-<script context="module">
-	export const router = false;
-</script>
-
 <svelte:head><title>Donations | Essential Strides</title></svelte:head>
 
 <div class="contentContainer">
