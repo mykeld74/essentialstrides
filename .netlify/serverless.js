@@ -4,6 +4,20 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 require('./shims.js');
 var _0SERVER = require('./server/index.js');
+require('assert');
+require('net');
+require('http');
+require('stream');
+require('buffer');
+require('util');
+require('stream/web');
+require('perf_hooks');
+require('util/types');
+require('events');
+require('tls');
+require('async_hooks');
+require('console');
+require('zlib');
 require('node:http');
 require('node:https');
 require('node:zlib');
@@ -254,6 +268,10 @@ function split_headers(headers) {
  */
 function init(manifest) {
 	const server = new _0SERVER.Server(manifest);
+
+	server.init({
+		env: process.env
+	});
 
 	return async (event, context) => {
 		const response = await server.respond(to_request(event), {

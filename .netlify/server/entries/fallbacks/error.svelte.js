@@ -17,27 +17,53 @@ var __copyProps = (to, from, except, desc) => {
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var stdin_exports = {};
 __export(stdin_exports, {
-  default: () => Error2,
-  load: () => load
+  default: () => Error$1
 });
 module.exports = __toCommonJS(stdin_exports);
-var import_index_e92a6b2a = require("../../chunks/index-e92a6b2a.js");
-function load({ error, status }) {
-  return { props: { error, status } };
+var import_chunks = require("../../chunks/index.js");
+const getStores = () => {
+  const stores = (0, import_chunks.g)("__svelte__");
+  return {
+    page: {
+      subscribe: stores.page.subscribe
+    },
+    navigating: {
+      subscribe: stores.navigating.subscribe
+    },
+    get preloading() {
+      console.error("stores.preloading is deprecated; use stores.navigating instead");
+      return {
+        subscribe: stores.navigating.subscribe
+      };
+    },
+    get session() {
+      removed_session();
+      return {};
+    },
+    updated: stores.updated
+  };
+};
+const page = {
+  subscribe(fn) {
+    const store = getStores().page;
+    return store.subscribe(fn);
+  }
+};
+function removed_session() {
+  throw new Error(
+    "stores.session is no longer available. See https://github.com/sveltejs/kit/discussions/5883"
+  );
 }
-const Error2 = (0, import_index_e92a6b2a.c)(($$result, $$props, $$bindings, slots) => {
-  let { status } = $$props;
-  let { error } = $$props;
-  if ($$props.status === void 0 && $$bindings.status && status !== void 0)
-    $$bindings.status(status);
-  if ($$props.error === void 0 && $$bindings.error && error !== void 0)
-    $$bindings.error(error);
-  return `<h1>${(0, import_index_e92a6b2a.e)(status)}</h1>
+const Error$1 = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
+  let $page, $$unsubscribe_page;
+  $$unsubscribe_page = (0, import_chunks.h)(page, (value) => $page = value);
+  $$unsubscribe_page();
+  return `<h1>${(0, import_chunks.e)($page.status)}</h1>
 
-<pre>${(0, import_index_e92a6b2a.e)(error.message)}</pre>
+<pre>${(0, import_chunks.e)($page.error.message)}</pre>
 
 
 
-${error.frame ? `<pre>${(0, import_index_e92a6b2a.e)(error.frame)}</pre>` : ``}
-${error.stack ? `<pre>${(0, import_index_e92a6b2a.e)(error.stack)}</pre>` : ``}`;
+${$page.error.frame ? `<pre>${(0, import_chunks.e)($page.error.frame)}</pre>` : ``}
+${$page.error.stack ? `<pre>${(0, import_chunks.e)($page.error.stack)}</pre>` : ``}`;
 });

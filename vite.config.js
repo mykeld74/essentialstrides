@@ -4,7 +4,6 @@ import path from 'path';
 /** @type {import('vite').UserConfig} */
 const config = {
 	plugins: [sveltekit()],
-	base: 'http://localhost:3000',
 	resolve: {
 		alias: {
 			$css: path.resolve('./src/css'),
@@ -13,7 +12,6 @@ const config = {
 			$img: path.resolve('./src/images')
 		}
 	},
-
 	css: {
 		preprocessorOptions: {
 			scss: {}

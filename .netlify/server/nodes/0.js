@@ -16,19 +16,22 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target, mod));
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var stdin_exports = {};
 __export(stdin_exports, {
-  css: () => css,
-  entry: () => entry,
+  component: () => component,
+  file: () => file,
+  imports: () => imports,
   index: () => index,
-  js: () => js,
-  module: () => module2
+  stylesheets: () => stylesheets
 });
 module.exports = __toCommonJS(stdin_exports);
-var module2 = __toESM(require("../entries/pages/__layout.svelte.js"));
 const index = 0;
-const entry = "pages/__layout.svelte-6cfd7677.js";
-const js = ["pages/__layout.svelte-6cfd7677.js", "chunks/index-33b36d9c.js", "chunks/image-5d9c1289.js"];
-const css = ["assets/pages/__layout.svelte-d0f63f14.css", "assets/image-2b33fc8e.css"];
+const component = async () => (await Promise.resolve().then(() => __toESM(require("../entries/pages/_layout.svelte.js")))).default;
+const file = "_app/immutable/components/pages/_layout.svelte-a8893de7.js";
+const imports = ["_app/immutable/components/pages/_layout.svelte-a8893de7.js", "_app/immutable/chunks/index-3213c06e.js", "_app/immutable/chunks/image-4ba3ba48.js", "_app/immutable/chunks/index-e44c1742.js"];
+const stylesheets = ["_app/immutable/assets/+layout-00e78e60.css", "_app/immutable/assets/image-b1baf09e.css"];

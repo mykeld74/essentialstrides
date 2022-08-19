@@ -16,7 +16,10 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target, mod));
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var stdin_exports = {};
 __export(stdin_exports, {
@@ -25,15 +28,17 @@ __export(stdin_exports, {
 module.exports = __toCommonJS(stdin_exports);
 const manifest = {
   appDir: "_app",
-  assets: /* @__PURE__ */ new Set(["bars.svg", "favicon.png", "navArrow.svg", "times.png", "times.svg"]),
+  assets: /* @__PURE__ */ new Set(["bars.svg", "bars2.svg", "favicon.png", "navArrow.svg", "times.svg", "times2.svg"]),
   mimeTypes: { ".svg": "image/svg+xml", ".png": "image/png" },
   _: {
-    entry: { "file": "start-f9b41969.js", "js": ["start-f9b41969.js", "chunks/index-33b36d9c.js"], "css": [] },
+    entry: { "file": "_app/immutable/start-a0183377.js", "imports": ["_app/immutable/start-a0183377.js", "_app/immutable/chunks/index-3213c06e.js"], "stylesheets": [] },
     nodes: [
       () => Promise.resolve().then(() => __toESM(require("./nodes/0.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/1.js"))),
+      () => Promise.resolve().then(() => __toESM(require("./nodes/2.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/3.js"))),
-      () => Promise.resolve().then(() => __toESM(require("./nodes/2.js")))
+      () => Promise.resolve().then(() => __toESM(require("./nodes/4.js"))),
+      () => Promise.resolve().then(() => __toESM(require("./nodes/5.js")))
     ],
     routes: [
       {
@@ -42,10 +47,29 @@ const manifest = {
         pattern: /^\/$/,
         names: [],
         types: [],
-        path: "/",
-        shadow: null,
-        a: [0, 2],
-        b: [1]
+        errors: [1],
+        layouts: [0],
+        leaf: 2
+      },
+      {
+        type: "page",
+        id: "contact",
+        pattern: /^\/contact\/?$/,
+        names: [],
+        types: [],
+        errors: [1],
+        layouts: [0],
+        leaf: 3
+      },
+      {
+        type: "page",
+        id: "donate",
+        pattern: /^\/donate\/?$/,
+        names: [],
+        types: [],
+        errors: [1],
+        layouts: [0],
+        leaf: 4
       },
       {
         type: "page",
@@ -53,10 +77,9 @@ const manifest = {
         pattern: /^\/founders\/?$/,
         names: [],
         types: [],
-        path: "/founders",
-        shadow: null,
-        a: [0, 3],
-        b: [1]
+        errors: [1],
+        layouts: [0],
+        leaf: 5
       }
     ],
     matchers: async () => {

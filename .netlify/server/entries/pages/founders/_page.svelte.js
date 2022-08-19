@@ -17,23 +17,30 @@ var __copyProps = (to, from, except, desc) => {
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var stdin_exports = {};
 __export(stdin_exports, {
-  default: () => Founders
+  default: () => Page
 });
 module.exports = __toCommonJS(stdin_exports);
-var import_index_e92a6b2a = require("../../chunks/index-e92a6b2a.js");
-var import_image_18f81acb = require("../../chunks/image-18f81acb.js");
-var founders_svelte_svelte_type_style_lang = /* @__PURE__ */ (() => ".headshot.svelte-11e5di0{width:100%;max-width:350px;float:left;margin:0 20px 20px 0;padding:0;box-shadow:4px 4px 4px rgba(0, 0, 0, 0.2)}h1.svelte-11e5di0{text-align:center;margin:20px 0}.blue.svelte-11e5di0{padding-bottom:20px;border-bottom:3px solid var(--primaryColor);margin-bottom:20px}a.svelte-11e5di0{color:var(--secondaryColor);text-decoration:none}a.svelte-11e5di0:hover{text-decoration:underline}")();
+var import_chunks = require("../../../chunks/index.js");
+var import_image = require("../../../chunks/image.js");
+const _page_svelte_svelte_type_style_lang = "";
 const css = {
   code: ".headshot.svelte-11e5di0{width:100%;max-width:350px;float:left;margin:0 20px 20px 0;padding:0;box-shadow:4px 4px 4px rgba(0, 0, 0, 0.2)}h1.svelte-11e5di0{text-align:center;margin:20px 0}.blue.svelte-11e5di0{padding-bottom:20px;border-bottom:3px solid var(--primaryColor);margin-bottom:20px}a.svelte-11e5di0{color:var(--secondaryColor);text-decoration:none}a.svelte-11e5di0:hover{text-decoration:underline}",
   map: null
 };
-const Founders = (0, import_index_e92a6b2a.c)(($$result, $$props, $$bindings, slots) => {
+const Page = (0, import_chunks.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `<div class="${"contentContainer"}"><h1 class="${"svelte-11e5di0"}">Meet Our Founders:</h1>
-	<div class="${"blue svelte-11e5di0"}"><div class="${"headshot svelte-11e5di0"}">${(0, import_index_e92a6b2a.v)(import_image_18f81acb.I, "Img").$$render($$result, {
-    source: "headshotBlue",
-    altText: "Dr. Kevin Blue"
-  }, {}, {})}</div>
+  return `${$$result.head += `${$$result.title = `<title>Meet our Founders | Essential Strides</title>`, ""}`, ""}
+
+<div class="${"contentContainer"}"><h1 class="${"svelte-11e5di0"}">Meet Our Founders:</h1>
+	<div class="${"blue svelte-11e5di0"}"><div class="${"headshot svelte-11e5di0"}">${(0, import_chunks.v)(import_image.I, "Img").$$render(
+    $$result,
+    {
+      source: "headshotBlue",
+      altText: "Dr. Kevin Blue"
+    },
+    {},
+    {}
+  )}</div>
 		<p>Kevin Blue, DPM, FACFAS, is a sports medicine fellowship-trained surgical podiatrist that is
 			double-board certified. He is dedicated to providing advanced care for foot and ankle
 			conditions in patients of all ages, including young children, teens, and seniors.
@@ -53,10 +60,15 @@ const Founders = (0, import_index_e92a6b2a.c)(($$result, $$props, $$bindings, sl
 			they can enjoy a rapid return to the activities they love.
 		</p>
 		<p>Contact: <a href="${"https://www.footsportsmed.com/"}" target="${"_blank"}" rel="${"noopener noreferrer"}" class="${"svelte-11e5di0"}">www.footsportsmed.com</a></p></div>
-	<div class="${"molchan"}"><div class="${"headshot svelte-11e5di0"}">${(0, import_index_e92a6b2a.v)(import_image_18f81acb.I, "Img").$$render($$result, {
-    source: "headshotMolchan",
-    altText: "Dr. Lauren Molchan"
-  }, {}, {})}</div>
+	<div class="${"molchan"}"><div class="${"headshot svelte-11e5di0"}">${(0, import_chunks.v)(import_image.I, "Img").$$render(
+    $$result,
+    {
+      source: "headshotMolchan",
+      altText: "Dr. Lauren Molchan"
+    },
+    {},
+    {}
+  )}</div>
 		<p>Dr. Lauren Molchan, DPM, AACFAS is a skilled and compassionate podiatrist practicing at Foot
 			Specialists Associates in Denver, Colorado.
 		</p>

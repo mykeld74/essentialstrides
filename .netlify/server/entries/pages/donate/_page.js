@@ -1,8 +1,6 @@
-var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
-var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __export = (target, all) => {
   for (var name in all)
@@ -16,22 +14,10 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
-  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
-  mod
-));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var stdin_exports = {};
 __export(stdin_exports, {
-  component: () => component,
-  file: () => file,
-  imports: () => imports,
-  index: () => index,
-  stylesheets: () => stylesheets
+  router: () => router
 });
 module.exports = __toCommonJS(stdin_exports);
-const index = 1;
-const component = async () => (await Promise.resolve().then(() => __toESM(require("../entries/fallbacks/error.svelte.js")))).default;
-const file = "_app/immutable/components/error.svelte-7daeff17.js";
-const imports = ["_app/immutable/components/error.svelte-7daeff17.js", "_app/immutable/chunks/index-3213c06e.js"];
-const stylesheets = [];
+const router = false;

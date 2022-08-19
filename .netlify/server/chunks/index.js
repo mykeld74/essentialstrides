@@ -17,16 +17,22 @@ var __copyProps = (to, from, except, desc) => {
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var stdin_exports = {};
 __export(stdin_exports, {
-  a: () => each,
-  b: () => add_attribute,
+  a: () => safe_not_equal,
+  b: () => null_to_empty,
   c: () => create_ssr_component,
+  d: () => each,
   e: () => escape,
+  f: () => add_attribute,
+  g: () => getContext,
+  h: () => subscribe,
   m: () => missing_component,
-  n: () => null_to_empty,
+  n: () => noop,
   s: () => setContext,
   v: () => validate_component
 });
 module.exports = __toCommonJS(stdin_exports);
+function noop() {
+}
 function run(fn) {
   return fn();
 }
@@ -35,6 +41,16 @@ function blank_object() {
 }
 function run_all(fns) {
   fns.forEach(run);
+}
+function safe_not_equal(a, b) {
+  return a != a ? b == b : a !== b || (a && typeof a === "object" || typeof a === "function");
+}
+function subscribe(store, ...callbacks) {
+  if (store == null) {
+    return noop;
+  }
+  const unsub = store.subscribe(...callbacks);
+  return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
 }
 function null_to_empty(value) {
   return value == null ? "" : value;
@@ -52,19 +68,25 @@ function setContext(key, context) {
   get_current_component().$$.context.set(key, context);
   return context;
 }
-Promise.resolve();
-const escaped = {
-  '"': "&quot;",
-  "'": "&#39;",
-  "&": "&amp;",
-  "<": "&lt;",
-  ">": "&gt;"
-};
-function escape(html) {
-  return String(html).replace(/["'&<>]/g, (match) => escaped[match]);
+function getContext(key) {
+  return get_current_component().$$.context.get(key);
 }
-function escape_attribute_value(value) {
-  return typeof value === "string" ? escape(value) : value;
+Promise.resolve();
+const ATTR_REGEX = /[&"]/g;
+const CONTENT_REGEX = /[&<]/g;
+function escape(value, is_attr = false) {
+  const str = String(value);
+  const pattern = is_attr ? ATTR_REGEX : CONTENT_REGEX;
+  pattern.lastIndex = 0;
+  let escaped = "";
+  let last = 0;
+  while (pattern.test(str)) {
+    const i = pattern.lastIndex - 1;
+    const ch = str[i];
+    escaped += str.substring(last, i) + (ch === "&" ? "&amp;" : ch === '"' ? "&quot;" : "&lt;");
+    last = i + 1;
+  }
+  return escaped + str.substring(last);
 }
 function each(items, fn) {
   let str = "";
@@ -122,6 +144,6 @@ function create_ssr_component(fn) {
 function add_attribute(name, value, boolean) {
   if (value == null || boolean && !value)
     return "";
-  const assignment = boolean && value === true ? "" : `="${escape_attribute_value(value.toString())}"`;
+  const assignment = boolean && value === true ? "" : `="${escape(value, true)}"`;
   return ` ${name}${assignment}`;
 }
