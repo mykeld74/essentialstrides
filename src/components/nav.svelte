@@ -161,8 +161,8 @@
 		width: 60px;
 		height: 60px;
 		position: absolute;
-		top: 72px;
-		right: 10px;
+		top: 110px;
+		right: 30px;
 		outline: none;
 		cursor: pointer;
 		display: flex;
