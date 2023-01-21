@@ -116,6 +116,7 @@
 		background: var(--primaryColor);
 		margin-top: 60px;
 		gap: 20px;
+		overflow: hidden;
 		p {
 			font-size: 14px;
 		}
