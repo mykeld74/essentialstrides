@@ -14,14 +14,19 @@
 			order: 1
 		},
 		{
+			name: 'Past Trips',
+			link: '/past-trips',
+			order: 2
+		},
+		{
 			name: 'Contact',
 			link: '/contact',
-			order: 2
+			order: 3
 		},
 		{
 			name: 'Donate',
 			link: '/donate',
-			order: 3
+			order: 4
 		}
 	];
 
@@ -161,8 +166,8 @@
 		width: 60px;
 		height: 60px;
 		position: absolute;
-		top: 72px;
-		right: 10px;
+		top: 110px;
+		right: 30px;
 		outline: none;
 		cursor: pointer;
 		display: flex;
