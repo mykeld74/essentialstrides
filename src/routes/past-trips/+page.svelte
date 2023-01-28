@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { fly, fade } from 'svelte/transition';
 	import Masonry from '$components/Masonry.svelte';
 	import peru2022images from '$utils/peru2022images';
 

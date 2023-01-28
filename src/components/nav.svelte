@@ -24,9 +24,14 @@
 			order: 3
 		},
 		{
-			name: 'Donate',
+			name: 'Donate or Volunteer',
 			link: '/donate',
 			order: 4
+		},
+		{
+			name: 'Special Thank You',
+			link: '/donors',
+			order: 5
 		}
 	];
 
@@ -99,13 +104,15 @@
 	</div>
 </button>
 {#if isOpen}
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div class="navOverlay" transition:fade on:click={() => (isOpen = false)} />
 	<div id="navContainer" transition:fly={{ x: 300, duration: 500 }}>
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<nav on:click={() => (isOpen = false)}>
 			<ul>
 				{#each navItems as navItem, i}
 					<li
-						transition:fly={{
+						in:fly={{
 							x: 100,
 							y: 50,
 							duration: 200,
