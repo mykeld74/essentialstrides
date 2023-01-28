@@ -29,9 +29,14 @@
 			order: 4
 		},
 		{
+			name: 'Fundraising Events',
+			link: '/fundraising-events',
+			order: 5
+		},
+		{
 			name: 'Special Thank You',
 			link: '/donors',
-			order: 5
+			order: 6
 		}
 	];
 
