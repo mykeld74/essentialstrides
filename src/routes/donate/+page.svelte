@@ -1,11 +1,29 @@
-<svelte:head><title>Donations | Essential Strides</title></svelte:head>
+<script lang="ts">
+	import { onMount } from 'svelte';
+</script>
+
+<svelte:head>
+	<title>Donations | Essential Strides</title>
+</svelte:head>
 
 <div class="contentContainer">
 	<h1>Donate Today</h1>
-	<p>
-		We are in the process of getting online donations set up. Until that time you can mail checks
-		to:
-	</p>
+	<p>You can donate to Essential Strides through PayPal using the button below:</p>
+	<div class="donateContainer">
+		<form class="donateForm" action="https://www.paypal.com/donate" method="post" target="_top">
+			<input type="hidden" name="hosted_button_id" value="8BAWSDN2LS4FL" />
+			<input
+				type="image"
+				src="https://res.cloudinary.com/bigbeardeddev/image/upload/v1674927958/essentialstrides/donateButton.png"
+				name="submit"
+				title="PayPal - The safer, easier way to pay online!"
+				alt="Donate with PayPal button"
+			/>
+			<img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+		</form>
+	</div>
+
+	<p>Or if you prefer you can mail checks to:</p>
 	<p>19284 Cottonwood Drive <br />Suite 201B<br />Parker, CO 80138</p>
 
 	<h2>Where your donations go:</h2>
@@ -21,9 +39,19 @@
 	</p>
 
 	<p>We are an established 501(c)(3) organization and can provide receipts for your records.</p>
+	<hr />
+	<h2>Volunteer</h2>
+	<p>
+		We accept volunteers to help with everything from fundraising efforts, supply collection, and
+		providing medical care during our trips. We have a team of surgeons, anesthesiologist and
+		nursing staff on each international trip. If you are interesting in volunteering with Essential
+		Strides, please contact us at <a class="emailLink" href="mailto:contact@essentialstrides.org"
+			>contact@essentialstrides.org</a
+		> to apply today!
+	</p>
 </div>
 
-<style>
+<style lang="scss">
 	.contentContainer {
 		min-height: calc(100vh - 100px);
 	}
@@ -33,5 +61,20 @@
 	}
 	h2 {
 		text-decoration: underline;
+	}
+	.donateContainer {
+		width: calc(100% - 40px);
+		display: flex;
+		justify-content: center;
+	}
+	.donateForm {
+		width: 100%;
+		max-width: 300px;
+		input {
+			width: 100%;
+		}
+	}
+	.emailLink {
+		color: var(--secondaryColor);
 	}
 </style>
