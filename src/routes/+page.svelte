@@ -20,7 +20,7 @@
 				surgical and educational services to underserved communities across the globe.
 			</p>
 		</div>
-		<div class="or"><Img source="operatingRoom" altText="Operating Room" /></div>
+		<div class="or"><Img source="Peru2022/Peru68" altText="Operating Room" /></div>
 	</div>
 
 	<div class="whyWeExist">
@@ -41,18 +41,10 @@
 			of an ongoing partnership.
 		</p>
 		<div class="feetImages">
-			<Img source="babyFeet" altText="Baby Feet" />
-			<Img source="foot" altText="Foot with defect" />
+			<Img source="Peru2022/Peru22" altText="Happy kid" />
+			<Img source="Peru2022/Peru67" altText="Baby's foot" />
+			<Img source="Peru2022/Peru40" altText="Baby's foot" />
 		</div>
-	</div>
-	<div class="whatWeDo">
-		<h2>What We Do:</h2>
-		<p>
-			Our first mission trip will be this upcoming July 2022 to a remote region in Peru called
-			Moyobamba. We will be treating approximately 30 patients of all ages. We have two Peruvian
-			traumatologists who will be trained in advanced foot and ankle surgery techniques. Please
-			continue to check the webpage and Instagram for updates.
-		</p>
 	</div>
 </div>
 
