@@ -41,7 +41,7 @@
 			of an ongoing partnership.
 		</p>
 		<div class="feetImages">
-			<Img source="Peru2022/Peru07" altText="Happy kid" />
+			<Img source="Peru2022/Peru22" altText="Happy kid" />
 			<Img source="Peru2022/Peru67" altText="Baby's foot" />
 			<Img source="Peru2022/Peru40" altText="Baby's foot" />
 		</div>
