@@ -3,13 +3,13 @@
 </script>
 
 <div class="contentContainer">
-	<h1>Happy Hour Fundraising Event February 23rd 2023</h1>
-	<p>
+	<h1>Sips for Strides - March 7th 2024</h1>
+	<!-- <p>
 		Come enjoy Peruvian themed cocktails, hors d'oeuvres, live music and silent auction to help
 		raise money for our 2023 trip!
-	</p>
+	</p> -->
 	<a
-		href="https://www.eventbrite.com/e/sips-for-strides-essential-strides-fundraiser-tickets-510321233547"
+		href="https://www.eventbrite.com/e/sips-for-strides-essential-strides-fundraiser-tickets-807381789667?aff=oddtdtcreator"
 		target="_blank"
 		rel="noopener noreferrer"
 		class="eventLink"
