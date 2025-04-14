@@ -5,33 +5,16 @@
 <div class="contentContainer">
 	<h1 class="headline">Fundraising Events</h1>
 	<div class="eventContainer">
-		<h2>Sips for Strides - March 7th, 2024</h2>
-		<!-- <p>
-			Come enjoy Peruvian themed cocktails, hors d'oeuvres, live music and silent auction to help
-			raise money for our 2023 trip!
-		</p> -->
-		<a
-			href="https://www.eventbrite.com/e/sips-for-strides-essential-strides-fundraiser-tickets-807381789667?aff=oddtdtcreator"
-			target="_blank"
-			rel="noopener noreferrer"
-			class="eventLink"
-		>
-			<p>Click here to purchase tickets</p>
-			<Image source="sipsForStrides" altText="Sips for Strides" />
-		</a>
-	</div>
-	<div class="divider" />
-	<div class="eventContainer">
-		<h2>Essential Strides Golf Scramble - June 3rd, 2024</h2>
+		<h2>Annual Golf Outing Fundraiser - June 16th, 2025</h2>
 
 		<a
-			href="https://www.eventbrite.com/e/essential-strides-golf-scramble-tickets-822146792187"
+			href="https://ubmeevents.com/event/8efb2757-c2c0-435c-b6f9-610807c5af27"
 			target="_blank"
 			rel="noopener noreferrer"
 			class="eventLink"
 		>
-			<p>Click here to purchase tickets</p>
-			<Image source="golfScramble" altText="Essential Strides Golf Scramble" />
+			<p>Click here to register</p>
+			<Image source="golfScramble" altText="Sips for Strides" />
 		</a>
 	</div>
 </div>
