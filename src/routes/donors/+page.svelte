@@ -53,6 +53,14 @@
 				<!-- <p class="donorName">Smith & Nephew</p> -->
 			</div>
 		</div>
+		<div class="donorContainer">
+			<div class="donor">
+				<div class="logoContainer riseLogo">
+					<Image source="Rise_Logo" altText="Rise Scrubs Logo" />
+				</div>
+				<!-- <p class="donorName">Smith & Nephew</p> -->
+			</div>
+		</div>
 	</div>
 	<ul class="donorContainer">
 		<li>CFAS: Colorado Foot and Ankle Society</li>
@@ -75,5 +83,10 @@
 		align-items: center;
 		background: #fff;
 		padding: 20px;
+	}
+	.riseLogo {
+		width: 100px;
+		height: auto;
+		object-fit: contain;
 	}
 </style>
