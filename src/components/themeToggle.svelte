@@ -19,7 +19,7 @@
 	};
 </script>
 
-<button on:click={toggle} class={isToggled ? '' : 'dark'} />
+<button on:click={toggle} class={isToggled ? 'themeToggle' : 'themeToggle dark'} />
 
 <style lang="scss">
 	button {

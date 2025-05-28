@@ -8,6 +8,12 @@
 
 <div class="heroContainer" />
 
+<button class="scrubsPartnershipBanner" popovertarget="scrubsPartnershipDialog">
+	<p class="scrubsPartnershipBannerText">
+		Essential Strides is proud to partner with Rise Scrubs -- Learn More...
+	</p>
+</button>
+
 <!-- <div class="titleBar"><h1>Essential Strides</h1></div> -->
 <div class="contentContainer">
 	<div class="intro">
@@ -48,6 +54,29 @@
 	</div>
 </div>
 
+<dialog id="scrubsPartnershipDialog" popover>
+	<div class="scrubsPartnershipDialogHeader">
+		<Img source="Rise_Logo" altText="Rise Scrubs" />
+		<h2>Rise Scrubs Partnership</h2>
+	</div>
+	<div class="scrubsPartnershipDialogContent">
+		<div class="scrubsPartnershipDialogText">
+			<p>
+				Shop <a href="https://risescrubs.com">risescrubs.com</a> and receive 20% off your order when
+				you enter code
+				<span>ESSENTIALSTRIDES20</span> at checkout.
+			</p>
+			<p>
+				For every purchase made with this code, Rise Scrubs will donate 5% back to Essential Strides
+				Foundation
+			</p>
+		</div>
+		<div class="scrubsPartnershipDialogImage">
+			<Img source="PeopleInScrubs" altText="Rise Scrubs" />
+		</div>
+	</div>
+</dialog>
+
 <style lang="scss">
 	.heroContainer {
 		width: 100%;
@@ -85,5 +114,72 @@
 	.feetImages {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+	.scrubsPartnershipBanner {
+		width: 100%;
+		border: none;
+		background-color: var(--secondaryColor);
+		color: var(--navTextColor);
+		padding: 10px;
+		text-align: center;
+		cursor: pointer;
+	}
+	.scrubsPartnershipBannerText {
+		font-size: 1.25rem;
+		font-weight: 600;
+	}
+
+	.scrubsPartnershipDialogHeader {
+		display: grid;
+		grid-template-columns: 1fr 4fr 1fr;
+		gap: 3rem;
+		width: 80%;
+		margin: 0 auto 20px;
+		h2 {
+			text-align: center;
+		}
+	}
+	#scrubsPartnershipDialog {
+		opacity: 0;
+		scale: 0.5;
+		background: var(--secondaryColor);
+		color: var(--navTextColor);
+		width: calc(100vw - 2rem);
+		height: fit-content;
+		max-width: 800px;
+		border-radius: 1rem;
+		padding: 2rem;
+		transition: all 0.5s ease-in-out;
+		transition-behavior: allow-discrete;
+		&::backdrop {
+			opacity: 0;
+			transition: opacity 0.25s ease-in-out;
+			transition-behavior: allow-discrete;
+		}
+		&:popover-open {
+			opacity: 1;
+			scale: 1;
+			transition: opacity 0.5s ease-in-out;
+			transition-behavior: allow-discrete;
+
+			@starting-style {
+				opacity: 0;
+				scale: 0.5;
+			}
+			&::backdrop {
+				opacity: 1;
+				background: oklch(0 0 0 / 0.5);
+				transition: opacity 0.25s ease-in-out;
+				transition-behavior: allow-discrete;
+				@starting-style {
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	.scrubsPartnershipDialogContent {
+		display: grid;
+		grid-template-columns: 3fr 1fr;
 	}
 </style>
