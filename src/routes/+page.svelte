@@ -62,8 +62,10 @@
 	<div class="scrubsPartnershipDialogContent">
 		<div class="scrubsPartnershipDialogText">
 			<p>
-				Shop <a href="https://risescrubs.com">risescrubs.com</a> and receive 20% off your order when
-				you enter code
+				Shop <a href="https://risescrubs.com" target="_blank" rel="noopener noreferrer"
+					>risescrubs.com</a
+				>
+				and receive 20% off your order when you enter code
 				<span>ESSENTIALSTRIDES20</span> at checkout.
 			</p>
 			<p>
@@ -178,6 +180,16 @@
 		}
 	}
 
+	.scrubsPartnershipDialogText {
+		a {
+			color: var(--navTextColor);
+			text-decoration: underline;
+			transition: color 0.25s ease-in-out;
+			&:hover {
+				color: #00284b;
+			}
+		}
+	}
 	.scrubsPartnershipDialogContent {
 		display: grid;
 		grid-template-columns: 3fr 1fr;
