@@ -56,7 +56,7 @@
 		<div class="donorContainer">
 			<div class="donor">
 				<div class="logoContainer riseLogo">
-					<Image source="Rise_Logo" altText="Rise Scrubs Logo" />
+					<Image source="RiseLogo" altText="Rise Scrubs Logo" />
 				</div>
 				<!-- <p class="donorName">Smith & Nephew</p> -->
 			</div>
@@ -84,9 +84,9 @@
 		background: #fff;
 		padding: 20px;
 	}
-	.riseLogo {
-		width: 100px;
-		height: auto;
-		object-fit: contain;
-	}
+	// .riseLogo {
+	// 	width: 250px;
+	// 	height: auto;
+	// 	object-fit: contain;
+	// }
 </style>
