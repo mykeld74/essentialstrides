@@ -5,10 +5,10 @@
 <div class="contentContainer">
 	<h1 class="headline">Fundraising Events</h1>
 	<div class="eventContainer">
-		<h2>Annual Golf Outing Fundraiser - June 16th, 2025</h2>
+		<h2>Annual Fall Gala - Saturday, September 13th, 2025</h2>
 
 		<a
-			href="https://ubmeevents.com/event/8efb2757-c2c0-435c-b6f9-610807c5af27"
+			href="https://ubmeevents.com/event/896d36ab-0f05-4dcf-8c33-75767000cb09"
 			target="_blank"
 			rel="noopener noreferrer"
 			class="eventLink"
