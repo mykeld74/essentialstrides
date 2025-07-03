@@ -46,11 +46,21 @@
 			plan to maintain close relationships with our medical peers abroad throughout the year as part
 			of an ongoing partnership.
 		</p>
-		<div class="feetImages">
+		<div class="esVideo">
+			<video
+				src="https://res.cloudinary.com/bigbeardeddev/video/upload/v1751546159/essentialstrides/video/EssentialStridesVoices.mp4"
+				poster="https://res.cloudinary.com/bigbeardeddev/image/upload/f_auto,q_auto/essentialstrides/video/esVideoPoster"
+				controls
+				width="100%"
+			>
+				<track kind="captions" src="" label="English" />
+			</video>
+		</div>
+		<!-- <div class="feetImages">
 			<Img source="Peru2022/Peru22" altText="Happy kid" />
 			<Img source="Peru2022/Peru67" altText="Baby's foot" />
 			<Img source="Peru2022/Peru40" altText="Baby's foot" />
-		</div>
+		</div> -->
 	</div>
 </div>
 
