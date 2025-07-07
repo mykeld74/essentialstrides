@@ -8,13 +8,13 @@
 		<h2>Annual Fall Gala - Saturday, September 13th, 2025</h2>
 
 		<a
-			href="https://ubmeevents.com/event/896d36ab-0f05-4dcf-8c33-75767000cb09"
+			href="https://my.onecause.com/event/organizations/bee21985-19be-42a8-8329-908f8efc6b46/events/vevt:e94694e2-ee64-471f-b6a9-a753d4488d9d/home/story"
 			target="_blank"
 			rel="noopener noreferrer"
 			class="eventLink"
 		>
 			<p>Click here to register</p>
-			<Image source="golfScramble" altText="Sips for Strides" />
+			<Image source="EsFundraiser" altText="Annual Fall Gala" />
 		</a>
 	</div>
 </div>
