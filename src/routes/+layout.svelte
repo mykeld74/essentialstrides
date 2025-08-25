@@ -45,9 +45,8 @@
 <slot />
 <footer>
 	<div class="footerBlock">
-		<p>19284 Cottonwood Drive</p>
-		<p>Suite 201b</p>
-		<p>Parker, CO 80138</p>
+		<p>4055 S Broadway</p>
+		<p>Englewood, CO 80113</p>
 		<a href="tel:7205159315"><p>720-515-9315</p></a>
 		<a href="mailto:contact@essentialstrides.org"><p>contact@essentialstrides.org</p></a>
 	</div>

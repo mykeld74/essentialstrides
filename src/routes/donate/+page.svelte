@@ -24,7 +24,7 @@
 	</div>
 
 	<p>Or if you prefer you can mail checks to:</p>
-	<p>19284 Cottonwood Drive <br />Suite 201B<br />Parker, CO 80138</p>
+	<p>4055 S Broadway<br />Englewood, CO 80113</p>
 
 	<h2>Where your donations go:</h2>
 	<p>
